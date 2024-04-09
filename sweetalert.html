@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- SweetAlert CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- HTML buttons to trigger SweetAlert dialogs -->
+<button id="showWarning">Show Warning</button>
+<button id="showQuestion">Show Question</button>
+<button id="showError">Show Error</button>
+<button id="showSuccess">Show Success</button>
+
+<script>
+    // Select buttons
+    const showWarningButton = document.getElementById('showWarning');
+    const showQuestionButton = document.getElementById('showQuestion');
+    const showErrorButton = document.getElementById('showError');
+    const showSuccessButton = document.getElementById('showSuccess');
+
+    // Add click event listeners
+    showWarningButton.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Warning!',
+            text: 'This is a warning message.',
+            icon: 'warning'
+        });
+    });
+
+    showQuestionButton.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Question?',
+            text: 'Do you want to continue?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
+        });
+    });
+
+    showErrorButton.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Error!',
+            text: 'Something went wrong.',
+            icon: 'error'
+        });
+    });
+
+    showSuccessButton.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Success!',
+            text: 'Operation completed successfully.',
+            icon: 'success'
+        });
+    });
+</script>
+
+</body>
+</html>

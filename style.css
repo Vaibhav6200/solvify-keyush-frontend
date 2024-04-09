@@ -1,0 +1,333 @@
+#step_progress_container {
+	position: relative;
+	margin-top: 20px
+}
+
+#step_progress_container fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding-bottom: 20px;
+	position: relative
+}
+
+#step_progress_container fieldset:not(:first-of-type) {
+	display: none
+}
+
+
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	color: lightgrey;
+	text-align: center;
+}
+
+#progressbar .active {
+	color: #7267EF
+}
+
+#progressbar li {
+	list-style-type: none;
+	font-size: 15px;
+	width: 20%;
+	float: left;
+	position: relative;
+	font-weight: 400;
+
+}
+
+#progressbar #step1:before {
+	content: "1"
+}
+
+#progressbar #step2:before {
+	content: "2"
+}
+
+#progressbar #step3:before {
+	content: "3"
+}
+
+#progressbar #step4:before {
+	content: "4"
+}
+
+#progressbar #step5:before {
+	content: "5"
+}
+
+#progressbar li:before {
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	display: block;
+	font-size: 20px;
+	color: #ffffff;
+	background: lightgray;
+	border-radius: 50%;
+	margin: 0 auto 10px auto;
+	padding: 2px
+}
+
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: lightgray;
+	position: absolute;
+	left: 0;
+	top: 21px;
+	z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+	background: #7267EF
+}
+
+.progress {
+	height: 20px
+}
+
+
+
+/* STYLE FOR STEP 1 */
+.tech-tag-close {
+	cursor: pointer;
+	  color: black;
+	  font-size:20px;
+	  margin-left: 5px;
+	  cursor: pointer;
+	}
+
+	.tech-tag-close:hover {
+	  color: #999;
+	}
+
+	.form-control:focus{
+		outline: none ;
+		box-shadow:none !important;
+	}
+/* STYLE FOR STEP 1 [END] */
+
+#img_uploads .col-md-3 label:hover{
+	background-color: aliceblue !important;
+}
+.bg_custome_light{
+	background-color: aliceblue;
+}
+
+/* STYLE FOR STEP 5 */
+.tech-used-tag {
+	display: inline-block;
+	background-color: aliceblue;
+	padding: 0px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+/* STYLE FOR STEP 5 [END] */
+
+/* Review plan card  [start] */
+:root{
+	--bg-primary-dark : #0C5AB5;
+	--bg-primary : #599EEE;
+	--bg-danger : #ee5959;
+	--text-dark : #505050;
+	--bg-success: #59EE7A;
+}
+*, *:before, *:after {
+
+	box-sizing: border-box;
+}
+body {
+	font-family: "Montserrat", sans-serif;
+}
+body > div{
+	height: 100vh;
+}
+.card_badge{
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	font-weight: 600;
+	font-size: 16px !important;
+	background-color: var(--bg-primary) !important;
+}
+.simple_badge_primary{
+	border-bottom-right-radius: 20px;
+	font-weight: 600;
+	font-size: 14px !important;
+	background-color: var(--bg-primary-dark) !important;
+}
+.simple_badge_success{
+	border-bottom-right-radius: 20px;
+	font-weight: 600;
+	font-size: 14px !important;
+	background-color: var(--bg-success) !important;
+}
+
+.plan_card{
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	width: 414px;
+}
+.plan_card_header{
+	border-top-right-radius: 20px !important;
+}
+.btn_plan{
+	background-color: var(--bg-primary) !important;
+	border: none;
+	font-size: 20px;
+	font-weight: 500;
+	width: 80%;
+	transition: 0.5s;
+}
+.btn_plan:hover{
+	transition: 0.5s;
+	background-color: var(--bg-primary-dark) !important;
+}
+.plan_title{
+	font-size: 28px;
+	font-weight: 600;
+	color: var(--text-dark);
+}
+.INR{
+	font-family:sans-serif;
+	font-size: 18px;
+	color: var(--text-dark);
+}
+.amount{
+	font-size: 38px;
+	line-height: 1;
+	color: var(--text-dark);
+	font-weight: 600;
+}
+.per_project{
+	font-size: 14px;
+	color: var(--text-dark);
+	font-weight: 500;
+}
+.form-group {
+	position: relative;
+	width: 70%;
+	margin-bottom: 0;
+}
+.form-control-placeholder {
+	position: absolute;
+	top:-10px;
+	font-weight: 500;
+	font-size: 14px;
+	color:var(--bg-primary);
+	background-color:white;
+	padding: 0;
+	margin:0px 12px;
+}
+.hosting_input_field{
+	font-size: 14px;
+}
+.review_form_input,.hosting_input_field{
+	outline:1px solid var(--bg-primary);
+	border-radius: 8px !important;
+}
+
+.review_form_input:focus,.hosting_input_field:focus{
+   outline:2px solid #7267EF;
+}
+*:focus {
+	box-shadow: none !important;
+}
+.static_title{
+	font-weight: 500;
+	font-size: 14px;
+}
+.note{
+	font-size: 12px;
+	font-weight: 600 !important;
+	color: #0C5AB5;
+}
+/* Review Plan card [END]*/
+
+.coupon-card {
+	background-color: #f8f9fa;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	border:1px solid  #aca600;
+  }
+
+
+  .coupon-card .coupon-header {
+	background-color: #fff70051;
+	color: #2f2f2f;
+	padding: 20px;
+	border-bottom: 1px solid #aca600;
+  }
+
+  .coupon-card .coupon-header h2 {
+	font-size: 24px;
+	margin-bottom: 0;
+  }
+
+  .coupon-card .coupon-header p {
+	font-size: 18px;
+	margin-bottom: 0;
+  }
+
+  .coupon-card .coupon-footer {
+	background-color: #343a40;
+	padding: 10px 10px;
+	text-align: center;
+	color: white;
+  }
+
+  .coupon-card .coupon-footer p {
+	margin-bottom: 0;
+  }
+  /* error */
+  .error{
+	color:red;
+  }
+  @media screen and (max-width:576px) {
+		.plan_card{
+			width: 314px;
+		}
+		.btn_plan{
+			font-size: 16px;
+		}
+		.amount{
+			font-size: 32px;
+		}
+		.plan_title{
+			font-size: 22px;
+		}
+		.form-control-placeholder{
+			font-size: 12px;
+		}
+		.static_title{
+			font-size: 12px;
+		}
+		.card_badge {
+			font-size: 12px !important;
+		}
+		.simple_badge_primary{
+			font-size: 12px;
+		}
+		.simple_badge_success{
+			font-size: 12px;
+		}
+		#step1,#step2,#step3,#step4,#step5{
+			font-size: 12px !important;
+		}
+		.form-control-placeholder{
+			margin:0px 9px;
+		}
+  }

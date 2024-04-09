@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- HTML buttons to trigger different types of toasts -->
+<button id="showTopLeftToast">Top Left Toast</button>
+<button id="showTopRightToast">Top Right Toast</button>
+<button id="showBottomLeftToast">Bottom Left Toast</button>
+<button id="showBottomRightToast">Bottom Right Toast</button>
+<hr>
+
+<!-- HTML buttons to trigger different types of toasts -->
+<button id="showSuccessToast">Success Toast</button>
+<button id="showErrorToast">Error Toast</button>
+<button id="showWarningToast">Warning Toast</button>
+
+
+<script>
+    // Select buttons
+    const showTopLeftToastButton = document.getElementById('showTopLeftToast');
+    const showTopRightToastButton = document.getElementById('showTopRightToast');
+    const showBottomLeftToastButton = document.getElementById('showBottomLeftToast');
+    const showBottomRightToastButton = document.getElementById('showBottomRightToast');
+
+    // Add click event listeners
+    showTopLeftToastButton.addEventListener('click', () => {
+        showToast('top-start');
+    });
+
+    showTopRightToastButton.addEventListener('click', () => {
+        showToast('top-end');
+    });
+
+    showBottomLeftToastButton.addEventListener('click', () => {
+        showToast('bottom-start');
+    });
+
+    showBottomRightToastButton.addEventListener('click', () => {
+        showToast('bottom-end');
+    });
+
+    // Function to show toast
+    function showToast(position) {
+        Swal.fire({
+            icon: 'info',
+            title: 'This is an info toast',
+            toast: true,
+            position: position,
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true
+        });
+    }
+</script>
+<script>
+    // Select buttons
+    const showSuccessToastButton = document.getElementById('showSuccessToast');
+    const showErrorToastButton = document.getElementById('showErrorToast');
+    const showWarningToastButton = document.getElementById('showWarningToast');
+
+    // Add click event listeners
+    showSuccessToastButton.addEventListener('click', () => {
+        showToast2('success');
+    });
+
+    showErrorToastButton.addEventListener('click', () => {
+        showToast2('error');
+    });
+
+    showWarningToastButton.addEventListener('click', () => {
+        showToast2('warning');
+    });
+
+
+    // Function to show toast
+    function showToast2(type) {
+        Swal.fire({
+            icon: type,
+            title: `This is a ${type} toast`,
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+        });
+    }
+</script>
+</body>
+</html>
